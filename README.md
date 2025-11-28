@@ -20,3 +20,52 @@ The app follows an **MVVM** structure (Model + ViewModel + View) and includes **
 - `connectivity_plus` for online/offline status
 
 ## Project Structure (MVVM)
+lib/
+main.dart
+models/
+weather_model.dart
+services/
+weather_service.dart
+storage_service.dart
+viewmodels/
+weather_viewmodel.dart
+views/
+weather_screen.dart
+widgets/
+input_section.dart
+weather_card.dart
+
+
+## How It Works (Flow)
+1. User enters **latitude** and **longitude**
+2. Press **Get Forecast**
+3. ViewModel calls the WeatherService (REST API)
+4. JSON is parsed into model classes (`WeatherData.fromJson`)
+5. Result is saved locally (SharedPreferences)
+6. UI updates automatically (Provider + notifyListeners)
+
+If the device is offline:
+- The app shows an **offline banner**
+- Previously saved forecast can still be displayed (cached data)
+
+## API Used
+- **Open-Meteo** forecast endpoint  
+The app requests:
+- `weathercode`
+- `temperature_2m_max`
+- `temperature_2m_min`
+- `precipitation_sum`
+- `forecast_days=7`
+
+## Requirements Checklist
+- [x] 7-day forecast shown
+- [x] Min/Max temperature displayed
+- [x] Visual weather representation (emoji + color)
+- [x] User input for latitude/longitude
+- [x] JSON parsing in a separate function/class
+- [x] Persistence (SharedPreferences)
+- [x] Scrollable list
+- [x] Numeric input validation (float)
+- [x] Works in portrait & landscape
+- [x] Handles no internet (offline banner + cached data)
+- [x] Error handling for API failures
