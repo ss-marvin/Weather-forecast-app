@@ -1,16 +1,22 @@
-# weather_forecast
+# Weather Forecast App (Flutter)
 
-A new Flutter project.
+A simple Flutter weather app that fetches a **7-day forecast** from the Open-Meteo API using **latitude/longitude** input.  
+The app follows an **MVVM** structure (Model + ViewModel + View) and includes **offline detection** and **local caching**.
 
-## Getting Started
+## Features
+- 🌍 Fetch weather forecast by **Latitude / Longitude**
+- 📅 Shows **7-day forecast** (date, min/max temperature, precipitation)
+- 🌤️ Visual representation of the weather using **emoji + color**
+- 📶 Detects internet connection status (shows an offline banner)
+- 💾 Saves the latest forecast locally using **SharedPreferences**
+- ✅ Input validation (only numeric values allowed)
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- **Flutter / Dart**
+- **Open-Meteo API**
+- `http` for REST calls
+- `provider` for state management (ChangeNotifier)
+- `shared_preferences` for persistence
+- `connectivity_plus` for online/offline status
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure (MVVM)
