@@ -4,12 +4,12 @@ A simple Flutter weather app that fetches a **7-day forecast** from the Open-Met
 The app follows an **MVVM** structure (Model + ViewModel + View) and includes **offline detection** and **local caching**.
 
 ## Features
-- 🌍 Fetch weather forecast by **Latitude / Longitude**
-- 📅 Shows **7-day forecast** (date, min/max temperature, precipitation)
-- 🌤️ Visual representation of the weather using **emoji + color**
-- 📶 Detects internet connection status (shows an offline banner)
-- 💾 Saves the latest forecast locally using **SharedPreferences**
-- ✅ Input validation (only numeric values allowed)
+- Fetch weather forecast by **Latitude / Longitude**
+- Shows **7-day forecast** (date, min/max temperature, precipitation)
+- Visual representation of the weather using **emoji + color**
+- Detects internet connection status (shows an offline banner)
+- Saves the latest forecast locally using **SharedPreferences**
+- Input validation (only numeric values allowed)
 
 ## Tech Stack
 - **Flutter / Dart**
@@ -57,15 +57,3 @@ The app requests:
 - `precipitation_sum`
 - `forecast_days=7`
 
-## Requirements Checklist
-- [x] 7-day forecast shown
-- [x] Min/Max temperature displayed
-- [x] Visual weather representation (emoji + color)
-- [x] User input for latitude/longitude
-- [x] JSON parsing in a separate function/class
-- [x] Persistence (SharedPreferences)
-- [x] Scrollable list
-- [x] Numeric input validation (float)
-- [x] Works in portrait & landscape
-- [x] Handles no internet (offline banner + cached data)
-- [x] Error handling for API failures
